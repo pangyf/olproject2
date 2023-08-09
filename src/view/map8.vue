@@ -26,28 +26,25 @@ export default {
         const rotateWithView = document.getElementById('rotateWithView')
 
         const overviewMapControl = new OverviewMap({
-            className:'ol-overviewmap ol-custom-overviewmap',
+            // className:'ol-overviewmap ol-custom-overviewmap',
             layers:[
                 new TileLayer({
-                    source: new OSM({
-                        'url':'https://{a-c}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png' +
-                               '?apikey=Your API key from https://www.thunderforest.com/docs/apikeys/ here'
-
-                    })
+                    source: new OSM()
                 })
             ],
-            collapseLabel:'\u00BB',
-            label:'\u00AB',
+            // collapseLabel:'\u00BB',
+            // label:'\u00AB',
             collapsed:false
         })
 
-        rotateWithView.addEventListener('change', () => {
-            overviewMapControl.setRotateWithView(this.checked)
-        })
+        // rotateWithView.addEventListener('change', () => {
+        //     console.log(this.checked)
+        //     overviewMapControl.setRotateWithView(this.checked)
+        // })
 
         const map = new Map({
-            controls:defaultControls().extend([overviewMapControl]),
-            interactions:defaultInteractions().extend([new DragRotateAndZoom()]),
+            // controls:defaultControls().extend([overviewMapControl]),
+            // interactions:defaultInteractions().extend([new DragRotateAndZoom()]),
 
             layers:[
                 new TileLayer({
@@ -60,6 +57,7 @@ export default {
                 zoom:7
             })
         })
+        map.addControl(overviewMapControl)
     },
     methods:{
 
@@ -67,12 +65,18 @@ export default {
 };
 </script>
 <style scoped>
+.ol-overviewmap-map{
+    border: 1px solid #7b98bc;
+    height: 150px!important;
+    margin: 2px;
+    width: 150px;
+}
 .map {
-  width: 600px;
+  width: 100%;
   height: 400px;
 }
 
-.map .ol-custom-overviewmap,
+/* .map .ol-custom-overviewmap,
 .map .ol-custom-overviewmap.ol-uncollapsible {
   bottom: auto;
   left: auto;
@@ -103,5 +107,5 @@ export default {
 .map .ol-rotate {
   top: 170px;
   right: 0;
-}
+} */
 </style>

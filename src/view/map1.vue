@@ -55,7 +55,6 @@ export default {
   },  
   mounted() {
     console.log(1)
-    debugger
             this.initMap()
           }
       }

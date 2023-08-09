@@ -51,6 +51,21 @@ const router = new VueRouter({
             name:'map8',
             component:() => import('../view/map8.vue')
         },
+        {
+            path:'/map9',
+            name:'map9',
+            component:() => import('../view/map9.vue')
+        },
+        {
+            path:'/map10',
+            name:'map10',
+            component:() => import('../view/map10.vue')
+        },
+        {
+            path:'/map11',
+            name:'map11',
+            component:() => import('../view/map11.vue')
+        },
     ]
 })
 export default router

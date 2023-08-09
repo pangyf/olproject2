@@ -12,8 +12,11 @@
           <li @click="goTo('map5')">地震集群</li>
           <li @click="goTo('map6')">地图属性控件</li>
           <li @click="goTo('map7')">要素聚类</li>
-          <li @click="goTo('map8')">鹰眼服务2</li>
+          <li @click="goTo('map8')">鹰眼服务</li>
+          <li @click="goTo('map10')">自定义多边形样式</li>
+          <li @click="goTo('map11')">绘制并修改要素</li>
         </ul>
+        
       </div>
       <div class="right">
         <router-view></router-view>
@@ -59,6 +62,13 @@ export default {
           break;
         case 'map8':
           this.$router.push('/map8')
+          break;
+        case 'map10':
+          this.$router.push('/map10')
+          break
+          case 'map11':
+          this.$router.push('/map11')
+          break;
         default:
       }
     },
@@ -71,15 +81,21 @@ export default {
   margin: 0;
   padding: 0;
 }
+.ol-overviewmap-map{
+    border: 1px solid #7b98bc;
+    height: 150px!important;
+    margin: 2px;
+    width: 150px;
+}
 .container-wrap {
   display: flex;
   justify-content: flex-start;
 }
-.container .left {
-  width: 150px;
+.container-wrap .left {
+  width: 15%;
   flex: 1;
 }
-.container .right {
+.container-wrap .right {
   width: 85%;
 }
 ul li {
