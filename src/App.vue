@@ -12,6 +12,7 @@
           <li @click="goTo('map5')">地震集群</li>
           <li @click="goTo('map6')">地图属性控件</li>
           <li @click="goTo('map7')">要素聚类</li>
+          <li @click="goTo('map8')">鹰眼服务</li>
         </ul>
       </div>
       <div class="right">
@@ -56,6 +57,8 @@ export default {
         case "map7":
           this.$router.push("/map7");
           break;
+        case 'map8':
+          this.$router.push('/map8')
         default:
       }
     },
