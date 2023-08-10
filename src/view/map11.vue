@@ -32,13 +32,13 @@ export default {
         }
     },
     mounted(){
-        const raster = new TileLayer({
+        const raster = new TileLayer({//瓦片图层
             source:new OSM()
         })
 
-        this.source = new VectorSource()
+        this.source = new VectorSource()//矢量数据源
 
-        const vector = new VectorLayers({
+        const vector = new VectorLayers({//矢量图层
             source:this.source,
             style:{
                 'fill-color':'rgba(255, 255, 255, 0.2)',
