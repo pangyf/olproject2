@@ -14,7 +14,9 @@
           <li @click="goTo('map7')">要素聚类</li>
           <li @click="goTo('map8')">鹰眼服务</li>
           <li @click="goTo('map10')">自定义多边形样式</li>
-          <li @click="goTo('map11')">绘制并修改要素</li>
+          <li @click="goTo('map12')">热力图</li>
+          <li @click="goTo('map13')">4326投影</li>
+          <li @click="goTo('map13')">全球航班飞行动画</li>
         </ul>
         
       </div>
@@ -66,8 +68,17 @@ export default {
         case 'map10':
           this.$router.push('/map10')
           break
-          case 'map11':
+        case 'map11':
           this.$router.push('/map11')
+          break;
+        case 'map12':
+          this.$router.push('/map12')
+          break;
+        case 'map13':
+          this.$router.push('/map13')
+          break;
+        case 'map14':
+          this.$router.push('/map14')
           break;
         default:
       }

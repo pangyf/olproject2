@@ -1,7 +1,7 @@
 <template>
   <div class="container2">
     地震集群
-    <div id="map" style="width: 100%; height: 100%"></div>
+    <div id="map" style="width: 700px; height: 400px"></div>
   </div>
 </template>
 
