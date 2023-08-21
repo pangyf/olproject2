@@ -16,7 +16,7 @@
           <li @click="goTo('map10')">自定义多边形样式</li>
           <li @click="goTo('map12')">热力图</li>
           <li @click="goTo('map13')">4326投影</li>
-          <li @click="goTo('map13')">全球航班飞行动画</li>
+          <li @click="goTo('map14')">全球航班飞行动画</li>
         </ul>
         
       </div>
